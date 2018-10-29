@@ -5,21 +5,18 @@ import axios from 'axios';
 
 class App extends Component {
 
-  constructor(props){
-    super(props)
-    this.state = {
-      users: []
-    }
-  }
-  componentDidMount(){
+//   state={
+//     user:[]
+//   }
+  componentDidMount()
+  {
     axios.get('http://localhost:8081/rest/neo4j/user/allUser')
-    .then(json => json.data.results.map(result => (
-      {
-        name: result.name
-        
-      })))
-    .then(newData => this.setState({users: newData, store: newData}))
-    .catch(error => alert(error))
+    .then(user => {
+        this.setState({
+            users: user.data
+        });
+        console.log(user)
+    });
   }
 //   newUser(event)
 //   {
@@ -38,7 +35,6 @@ class App extends Component {
 // console.log(newUser)
 //   }
   render() {
-   
     return (
       <div id="main"><label>Email Id:</label>
       {/* <form onChange={this.handleNewUser.bind(this)}> */}
