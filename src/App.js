@@ -1,50 +1,62 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import React, { Component} from 'react';
 import './index.css'
 import axios from 'axios';
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input,
+  Button,
+} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {Link} from 'react-router-dom'
 
 class App extends Component {
+componentDidMount()
+{
+  axios('http://localhost:8081/rest/neo4j/user/allUser')
+  .then(data => 
+{
+   
+     this.setState({ data })
 
-//   state={
-//     user:[]
-//   }
-  componentDidMount()
-  {
-    axios.get('http://localhost:8081/rest/neo4j/user/allUser')
-    .then(user => {
-        this.setState({
-            users: user.data
-        });
-        console.log(user)
-    });
-  }
-//   newUser(event)
-//   {
-//     this.setState({
-//       userName:event.target.value
-
-//     })
-//   }
-//   handleNewUser(event)
-//   {
-// event.preventDefault()
-// const newUser={
-//   name:this.state.userName
-// }
-// axios.getpost('http://localhost:8081/rest/neo4j/user/addUser',newUser)
-// console.log(newUser)
-//   }
+console.log(data);
+})
+}
   render() {
     return (
-      <div id="main"><label>Email Id:</label>
-      {/* <form onChange={this.handleNewUser.bind(this)}> */}
-            <input type="text"  placeholder="Enter email@Id"/>
-            <div>
-            <button type="submit"  value=""><Link to="/next-page" id="link">Submit</Link></button>
-             </div>
-             {/* </form> */}
-         </div>
+      <Container className="App">
+        <h2 style={{color:'black'}} id="welcome">Welcome To FriendsBook !</h2>
+        <div id="main">
+        <Form className="form">
+          <Col>
+            <FormGroup id="formGroup">
+           <Label id="iconLabel"> <i className="fa fa-envelope" aria-hidden="true"></i></Label>
+              <Label id="emailLabel">Email</Label>
+              <Input
+                type="email"
+                name="email"
+                id="exampleEmail"
+                placeholder="myemail@email.com"
+                
+              />
+            </FormGroup>
+          </Col>
+          {/* <Col>
+            <FormGroup>
+              <Label for="examplePassword">Password</Label>
+              <Input
+                type="password"
+                name="password"
+                id="examplePassword"
+                placeholder="********"
+              />
+            </FormGroup>
+          </Col> */}
+          <Link to="/next-page" ><Button className="btn btn-primary" id="btn">Submit</Button></Link>
+        </Form></div>
+      </Container>
     );
+ 
   }
 }
 
