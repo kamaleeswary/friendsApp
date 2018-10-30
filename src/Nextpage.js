@@ -1,155 +1,100 @@
 import React from "react";
-import './index.css'
+import './index.css';
+import {Link} from 'react-router-dom'
 
 class Nextpage extends React.Component
 {
+    // constructor(props) {
+    //     super(props);
+    //   }
     render() {
         return (
             
-            <div class="container emp-profile">
+            <div className="container emp-profile">
             {/* <h1>Friends Of User</h1> */}
             <form method="post">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="profile-img">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
+                    <div className="col-md-6">
+                        <div className="profile-head">
                                    <h1>Friends Suggestion</h1>
-                                   <div class="card" style={{width:"18rem"}}>
-  <img class="card-img-top"  alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-                                    {/* <p class="proile-rating">RANKINGS : <span>8/10</span></p> */}
-                            {/* <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                </li>
-                            </ul> */}
-                        </div>
-                    </div>
-                    {/* <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                    </div> */}
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>User Name</p>
-                            {/* <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a> */}
-                            <p>Address</p>
-                            {/* <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/> */}
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>User Id</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Kshiti123</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>123 456 7890</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Experience</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Hourly Rate</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>10$/hr</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Total Projects</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>230</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
+                                   
+                                   <div class="container">
+	<div className="row">
+    	 <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div className="row">
+                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="rowdiv">
+                        <div className="well profile col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                <figure>
+                                     <img src="http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png" alt="" class="img-circle" style={{width:"75px"}} id="user-img"/>
+                                </figure>
+                                <h5 ><strong id="user-name">   {this.props.org}</strong></h5>
+                                <p  id="user-frid">FBT000000213 </p>
+                                <p  id="user-email">arunkumarperumal8791@gmail.com </p>                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 divider text-center"></div>
+                                <p id="strong2"><strong>Job role</strong></p>
+                                <p  id="user-role">Software Engineer</p>
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 divider text-center"></div>
+                                    <div className=" col-lg-6 left" id="last">
+                                      <Link to="/next-page2">   <button class="btn btn-info btn-block" id="span"><span class="fa fa-user"></span> View </button></Link>
                                     </div>
-                                </div>
+                              </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+ </div>
+                   
+                </div>
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="profile-work">
+                            <p>User Name</p>
+                           
+                            <p>Address</p>
+                           
+                        </div>
+                    </div>
+                   
+                </div>
+                <hr></hr>
+                <div>
+                    <h3>Recomondation</h3>
+                    <div class="container">
+	<div className="row">
+    	 <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div className="row">
+                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="rowdiv">
+                        <div className="well profile col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                <figure>
+                                     <img src="http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png" alt="" class="img-circle" style={{width:"75px"}} id="user-img"/>
+                                </figure>
+                                <h5 ><strong id="user-name">Arun Kumar Perumal</strong></h5>
+                                <p  id="user-frid">FBT000000213 </p>
+                                <p  id="user-email">arunkumarperumal8791@gmail.com </p>
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 divider text-center"></div>
+                                <p id="strong2"><strong>Job role</strong></p>
+                                <p  id="user-role">Software Engineer</p>
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 divider text-center"></div>
+                                   
+                                    <div className=" col-lg-6 left" id="last">
+                                          <Link to="/next-page2">  <button class="btn btn-info btn-block" id="span"><span class="fa fa-user"></span> View </button></Link>
+                                    </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
                 </div>
             </form>           
         </div>

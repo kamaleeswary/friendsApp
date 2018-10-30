@@ -15,6 +15,10 @@
     background-color:cadetblue;
     
 }
+#rowdiv
+{
+    border-radius: 16px;
+}
 #welcome
 {
  text-align: center;
@@ -122,4 +126,48 @@ body{
 .profile-tab p{
     font-weight: 600;
     color: #0062cc;
+}
+#user-name
+{
+    text-align:center;
+}
+#user-frid
+{
+    text-align:center;font-size: smaller;
+}
+#user-email
+{
+    text-align:center;font-size: smaller;overflow-wrap: break-word;
+}
+#strong
+{
+    text-align:center;font-size: smaller;
+}
+#strong2
+{
+    text-align:center;font-size: smaller;
+}
+#user-role
+{
+    text-align:center;font-size: smaller;
+}
+#strong3
+{
+    text-align: center;
+}
+#last
+{
+    text-align:center;overflow-wrap: break-word;
+}
+#strong4
+{
+    text-align: center;
+}
+#strong5
+{
+    text-align:center;overflow-wrap: break-word;
+}
+#span
+{
+    text-align: center;
 }
